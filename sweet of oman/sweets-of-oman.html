@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweets of Oman UAE</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --gold-dark: #8B6914;
+      --deep: #1A0E00;
+      --cream: #FAF5EC;
+      --brown: #3D1F00;
+      --text: #2C1A00;
+      --muted: #8B7355;
+      --white: #FFFFFF;
+      --section-pad: 100px 6vw;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 6vw;
+      background: rgba(26, 14, 0, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+      transition: background 0.3s;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.03em;
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      color: var(--white);
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-cta {
+      padding: 0.55rem 1.4rem;
+      border: 1px solid var(--gold);
+      color: var(--gold-light) !important;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold) !important;
+      color: var(--deep) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--gold-light);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+        background: url('pistachio 2 hero design.png') no-repeat center center;
+  background-size: cover; 
+      display: flex;
+      align-items: center;
+      padding: 0 6vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(201, 168, 76, 0.12) 0%, transparent 60%),
+        repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(201, 168, 76, 0.03) 40px, rgba(201, 168, 76, 0.03) 41px);
+    }
+
+    .hero-decor {
+      position: absolute;
+      right: 5vw;
+      top: 50%;
+      transform: translateY(-50%);
+      width: min(420px, 45vw);
+      height: min(420px, 45vw);
+      border-radius: 50%;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-decor::before {
+      content: '';
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      position: absolute;
+    }
+
+    .hero-decor::after {
+      content: '✦';
+      font-size: 5rem;
+      color: rgba(201, 168, 76, 0.08);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12rem;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 1.08;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .hero-desc {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      max-width: 460px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 0.9rem 2.2rem;
+      background: var(--gold);
+      color: var(--deep);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      padding: 0.9rem 2.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 400;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* MARQUEE STRIP */
+    .marquee-strip {
+      background: var(--gold);
+      padding: 0.75rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-inner {
+      display: inline-block;
+      animation: marquee 28s linear infinite;
+    }
+
+    .marquee-inner span {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--deep);
+      font-weight: 600;
+      margin: 0 2.5rem;
+    }
+
+    .marquee-inner span::before {
+      content: '✦  ';
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: var(--section-pad);
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      padding: 100px 6vw;
+    }
+
+    .about-visual {
+      position: relative;
+      height: 480px;
+    }
+
+    .about-card-main {
+      position: absolute;
+      inset: 0;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: url('pistachio our story.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .about-card-main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.15), transparent 70%);
+    }
+
+
+    .about-badge {
+      position: absolute;
+      bottom: -0.5rem;
+      right: -1.5rem;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .about-badge strong {
+      font-size: 2rem;
+      color: var(--deep);
+      line-height: 1;
+    }
+
+    .about-badge small {
+      font-size: 0.62rem;
+      color: var(--brown);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold-dark);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--brown);
+      margin-bottom: 1.2rem;
+    }
+
+    h2 em {
+      font-style: italic;
+      color: var(--gold-dark);
+    }
+
+    .about-text p {
+      color: var(--muted);
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      border-top: 1px solid rgba(201, 168, 76, 0.2);
+      padding-top: 2rem;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold-dark);
+      font-weight: 700;
+    }
+
+    .stat span {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* PRODUCTS */
+    .products {
+      background: var(--cream);
+    }
+
+    .products-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .products-header h2 {
+      color: var(--brown);
+    }
+
+    .products-header p {
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0.8rem auto 0;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .product-card:hover {
+      
+      box-shadow: 0 24px 60px rgba(26, 14, 0, 0.12);
+    }
+
+    .product-img {
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-img::before {  
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.85;
+    }
+
+    .product-img span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--gold);
+      color: var(--deep);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+    }
+
+    .product-body {
+      padding: 1.4rem 1.5rem 1.8rem;
+    }
+
+    .product-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--brown);
+      margin-bottom: 0.4rem;
+    }
+
+    .product-body p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .product-line {
+      width: 32px;
+      height: 2px;
+      background: var(--gold);
+      margin-top: 1rem;
+    }
+
+    /* BRANDS */
+    .brands {
+      background: var(--deep);
+      padding: var(--section-pad);
+    }
+
+    .brands-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .brands-header h2 {
+      color: var(--white);
+    }
+
+    .brands-header p {
+      color: rgba(255, 255, 255, 0.45);
+      font-weight: 300;
+      max-width: 450px;
+      margin: 0.8rem auto 0;
+    }
+
+    .brands-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .brand-card {
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      border-radius: 4px;
+      padding: 3rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .brand-card:hover {
+      border-color: rgba(201, 168, 76, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .brand-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.5);
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-card p {
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .brand-flavors {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .flavor-pill {
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      color: rgba(201, 168, 76, 0.7);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 0.85rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    .brand-icon {
+      position: absolute;
+      right: 2rem;
+      top: 2.5rem;
+      font-size: 4rem;
+      opacity: 0.07;
+    }
+
+    /* DISTRIBUTION */
+    .distribution {
+      background: var(--white);
+    }
+
+    .dist-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .dist-text h2 {
+      color: var(--brown);
+      margin-bottom: 1.2rem;
+    }
+
+    .dist-text p {
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.9;
+      margin-bottom: 2rem;
+    }
+
+    .dist-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .dist-feature {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .dist-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--cream), #EDE8DC);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .dist-feature-text strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--brown);
+      margin-bottom: 0.2rem;
+    }
+
+    .dist-feature-text span {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .dist-map {
+      background: linear-gradient(135deg, var(--deep), #2E1800);
+      border-radius: 4px;
+      padding: 2.5rem;
+      position: relative;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .dist-map::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(201, 168, 76, 0.1), transparent 60%);
+    }
+
+    .map-dots {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10rem;
+      color: rgba(201, 168, 76, 0.05);
+    }
+
+    .map-tag {
+      position: relative;
+      z-index: 1;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .map-sub {
+      font-size: 0.8rem;
+      color: rgba(201, 168, 76, 0.6);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .map-regions {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .region-dot {
+      background: rgba(201, 168, 76, 0.15);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      color: var(--gold-light);
+      letter-spacing: 0.08em;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+
+    .contact-info h2 {
+      color: var(--brown);
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-info>p {
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.9;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .contact-item-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      font-size: 1rem;
+    }
+
+    .contact-item-text strong {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--brown);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-item-text span {
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* FORM */
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 2.5rem;
+      border: 1px solid rgba(201, 168, 76, 0.12);
+    }
+
+    .contact-form-wrap h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--brown);
+      margin-bottom: 1.8rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--cream);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 2px;
+      padding: 0.8rem 1rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 1rem;
+      background: var(--deep);
+      color: var(--gold-light);
+      border: none;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 2px;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+
+    .form-submit:hover {
+      background: var(--brown);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: var(--gold-dark);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--deep);
+      padding: 4rem 6vw 2rem;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .nav-logo {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.88rem;
+      line-height: 1.8;
+      font-weight: 300;
+      max-width: 220px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.6);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.78rem;
+    }
+
+    .footer-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(201, 168, 76, 0.15);
+    }
+
+    .socials {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .socials a {
+      width: 34px;
+      height: 34px;
+      border-radius: 2px;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .socials a:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .about,
+      .dist-inner,
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .brands-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-decor {
+        display: none;
+      }
+
+      .about-visual {
+        height: 280px;
+      }
+
+      .about-badge {
+        right: 0;
+        bottom: -1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      :root {
+        --section-pad: 64px 5vw;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        padding: 1rem 5vw;
+      }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content>* {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero-eyebrow {
+      animation-delay: 0.1s;
+    }
+
+    .hero h1 {
+      animation-delay: 0.25s;
+    }
+
+    .hero-desc {
+      animation-delay: 0.4s;
+    }
+
+    .hero-btns {
+      animation-delay: 0.55s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Sweets <span>of Oman</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#brands">Our Brands</a></li>
+      <li><a href="#distribution">Distribution</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <div class="hamburger" onclick="this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-decor"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. in the UAE</p>
+      <h1>Crafted with<br><em>Tradition,</em><br>Delivered with<br>Pride.</h1>
+      <p class="hero-desc">Sweets of Oman UAE brings you the finest chocolates with premium
+        confections — rooted in Middle Eastern heritage.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-primary">Explore Products</a>
+        <a href="#contact" class="btn-outline">Partner with Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <span>Naqko Chocolate</span>
+      <span>Zoho Chocolate</span>
+      <span>Pistachio Kunafa</span>
+      <span>Premium chocolate</span>
+      <span>mexxi</span>
+      <span>vigo</span>
+      <span>Naqko Chocolate</span>
+      <span>Zoho Chocolate</span>
+      <span>Pistachio Kunafa</span>
+      <span>Premium sweets</span>
+      <span>pistachio</span>
+      <span>giza</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-visual">
+      <div class="about-card-main">
+        <div class="arabic">حلويات</div>
+      </div>
+      <div class="about-badge">
+        <strong>UAE</strong>
+        <small>Based &amp;<br>Operating</small>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-eyebrow">Our Story</p>
+      <h2>Where <em>Heritage</em> Meets Modern Taste</h2>
+      <p>Sweets of Oman UAE is a passionate confectionery distributor and producer deeply rooted in the rich sweet
+        traditions of the Arabian Gulf. We bring together authentic recipes, premium ingredients, and modern
+        craftsmanship.</p>
+      <p>From our own chocolate brands — Naqko and Zoho — to our beloved pistachio kunafa and curated confections, every
+        product reflects our commitment to quality and cultural authenticity.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <strong>7+</strong>
+          <span>Own Brands</span>
+        </div>
+        <div class="stat">
+          <strong>UAE</strong>
+          <span>Distribution</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Premium Quality</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="products-header">
+      <p class="section-eyebrow" style="justify-content:center;">What We Offer</p>
+      <h2>Our <em>Products</em></h2>
+      <p>A curated selection of premium confections, chocolates, and traditional sweets from the heart of the Gulf.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+            <div class="product-img">
+              <img src="product image naqko 4.jpg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Dubai edition kunafa</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+              <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.10 PM (2).jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Pistachio Kunafa Bites</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+                     
+        <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.10 PM.jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Belgian Cigar</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>              
+        <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.11 PM (1).jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Coconut Kunafa Bites</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>              
+        <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.11 PM (2).jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Chokostick Hazelnut</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>              
+        <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.11 PM (3).jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Chokostick Almond</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+              <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.12 PM (1).jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Chokostick Speculoos</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+                      <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.12 PM (2).jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Chokostick Pistachio</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+                              <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.17.15 PM.jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Chokostick Mango</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+        <div class="product-card card-pistachio">
+        <div class="product-img">
+          <img src="product image naqko hearts.jpg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">Naqko</div>
+        </div>
+        <div class="product-body">
+          <h3>naqko hearts</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+           <div class="product-card card-kunafa">
+        <div class="product-img">
+          <img src="WhatsApp Image 2026-05-18 at 11.10.09 PM.jpeg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">Naqko</div>
+        </div>
+        <div class="product-body">
+          <h3>Mango With Passion Fruit</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+      <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.13 PM.jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Pistachio Kunafa Minis</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+                      <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.14 PM (2).jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">Sweets of oman</div>
+            </div>
+            <div class="product-body">
+              <h3>Pistachio Kunafa Chocolate Bar</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+              <div class="product-card">
+            <div class="product-img">
+              <img src="product image emyr bites.jpg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">Emir Bytes</div>
+            </div>
+            <div class="product-body">
+              <h3>Dark Chocolate</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+               <div class="product-card card-baklava">
+        <div class="product-img">
+         <img src="product image emyr bites white chocolate.jpg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">emir bytes</div>
+        </div>
+          <div class="product-body">
+          <h3>white chocolate</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+                      <div class="product-card">
+            <div class="product-img">
+              <img src="WhatsApp Image 2026-05-18 at 11.10.13 PM (3).jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">naqko</div>
+            </div>
+            <div class="product-body">
+              <h3>Pistachio Kunafa Minis</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+      <div class="product-card">
+        <div class="product-img">
+          <img src="poster label naqo.jpg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+          <div class="product-tag">Zoha</div>
+        </div>
+        <div class="product-body">
+          <h3>pistachio kunafa</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+      <div class="product-card card-dates">
+        <div class="product-img">
+          <img src="product image2 mexxi.jpg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">mexxi</div>
+        </div>
+        <div class="product-body">
+          <h3>oat choco</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+      <div class="product-card card-baklava">
+        <div class="product-img">
+         <img src="pd2.jpg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">giza</div>
+        </div>
+        <div class="product-body">
+          <h3>giza pyramid</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="eclairs.jpeg" alt="error loading image" style="max-width: 100%; height: auto; object-fit: cover;">
+              <div class="product-tag">Misky</div>
+            </div>
+            <div class="product-body">
+              <h3>Eclairs</h3>
+              <div class="product-line"></div>
+            </div>
+        </div>
+      <div class="product-card card-baklava">
+        <div class="product-img">
+         <img src="misky,.jpeg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">Misky</div>
+        </div>
+          <div class="product-body">
+          <h3>Toffee Kesar Milk</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+      <div class="product-card card-baklava">
+        <div class="product-img">
+         <img src="WhatsApp Image 2026-05-18 at 11.24.53 PM (1).jpeg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">Misky</div>
+        </div>
+          <div class="product-body">
+          <h3>Toffee English</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+      <div class="product-card card-baklava">
+        <div class="product-img">
+         <img src="WhatsApp Image 2026-05-18 at 11.24.53 PM (2).jpeg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">Misky</div>
+        </div>
+          <div class="product-body">
+          <h3>Toffee Cardomon</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+      <div class="product-card card-baklava">
+        <div class="product-img">
+         <img src="WhatsApp Image 2026-05-18 at 11.24.53 PM.jpeg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">Misky</div>
+        </div>
+          <div class="product-body">
+          <h3>Toffee Caramel</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+      <div class="product-card card-baklava">
+        <div class="product-img">
+         <img src="WhatsApp Image 2026-05-18 at 11.24.54 PM (1).jpeg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">Misky</div>
+        </div>
+          <div class="product-body">
+          <h3>Toffee Butter Tops</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+      <div class="product-card card-baklava">
+        <div class="product-img">
+         <img src="WhatsApp Image 2026-05-18 at 11.24.54 PM.jpeg" alt="error loading image" style="max-width: 100%; height: auto;">
+          <div class="product-tag">Misky</div>
+        </div>
+          <div class="product-body">
+          <h3>Toffee Butter</h3>
+          <div class="product-line"></div>
+        </div>
+      </div>
+
+
+    </div>
+         
+  </section>
+
+  <!-- BRANDS -->
+  <section class="brands" id="brands">
+    <div class="brands-header">
+      <p class="section-eyebrow" style="justify-content:center; color:rgba(201,168,76,0.6);">Our Own Labels</p>
+      <h2 style="color:var(--white);">Meet Our <em style="color:var(--gold-light);">Brands</em></h2>
+      <p>Two distinct chocolate identities born from a shared passion for quality Gulf confectionery.</p>
+    </div>
+    <div class="brands-grid">
+      <div class="brand-card">
+        <div class="brand-icon">🍫</div>
+        <div class="brand-name">Naqko</div>
+        <div class="brand-subtitle">Chocolate &amp; Confections</div>
+        <p>Naqko is our heritage line — that delivers each product as the signature segment. Each bar is a tribute to the land it was born from.</p>
+        <div class="brand-flavors">
+          <span class="flavor-pill">pistachio</span>
+          <span class="flavor-pill">chocolate</span>
+          <span class="flavor-pill">kunafa</span>
+          <span class="flavor-pill">premium</span>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-icon">✨</div>
+        <div class="brand-name">Zoha</div>
+        <div class="brand-subtitle">Chocolate &amp; Confections</div>
+        <p>Zoho is our bold contemporary brand, crafted for those who seek intensity and innovation. Inspired by the UAE's cosmopolitan energy, Zoho pushes boundaries with unexpected flavour combinations.</p>
+        <div class="brand-flavors">
+          <span class="flavor-pill">pistachio</span>
+          <span class="flavor-pill">premium</span>
+          <span class="flavor-pill">chocolate</span>
+          <span class="flavor-pill">kunafa</span>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-icon">🍫</div>
+        <div class="brand-name">misky</div>
+        <div class="brand-subtitle">Chocolate &amp; Confections</div>
+        <p>Another brand that delivers quality in time</p>
+        <div class="brand-flavors">
+          <span class="flavor-pill">pistachio</span>
+          <span class="flavor-pill">premium</span>
+          <span class="flavor-pill">chocolate</span>
+          <span class="flavor-pill">variety</span>
+        </div>
+      </div> 
+      <div class="brand-card">
+        <div class="brand-icon">🍫</div>
+        <div class="brand-name">mexxi</div>
+        <div class="brand-subtitle">Chocolate &amp; Confections</div>
+        <p>A brand that delivers chocolate combinations with ease and perfection</p>
+        <div class="brand-flavors">
+          <span class="flavor-pill">oats</span>
+          <span class="flavor-pill">premium</span>
+          <span class="flavor-pill">chocolate</span>
+          <span class="flavor-pill">variety</span>
+        </div>
+      </div>      
+      <div class="brand-card">
+        <div class="brand-icon">🍫</div>
+        <div class="brand-name">emir bytes</div>
+        <div class="brand-subtitle">Chocolate &amp; Confections</div>
+        <p>Another signature that delivers delicious products</p>
+        <div class="brand-flavors">
+          <span class="flavor-pill">choco</span>
+          <span class="flavor-pill">premium</span>
+          <span class="flavor-pill">chocolate</span>
+          <span class="flavor-pill">variety</span>
+        </div>
+      </div>    
+            <div class="brand-card">
+        <div class="brand-icon">🍫</div>
+        <div class="brand-name">Lora</div>
+        <div class="brand-subtitle">Chocolate &amp; Confections</div>
+        <p>great flavours that delivers delicious products</p>
+        <div class="brand-flavors">
+          <span class="flavor-pill">choco</span>
+          <span class="flavor-pill">premium</span>
+          <span class="flavor-pill">chocolate</span>
+          <span class="flavor-pill">variety</span>
+        </div>
+      </div>  
+            <div class="brand-card">
+        <div class="brand-icon">🍫</div>
+        <div class="brand-name">Giza</div>
+        <div class="brand-subtitle">Chocolate &amp; Confections</div>
+        <p>latest signature that delivers delicious products</p>
+        <div class="brand-flavors">
+          <span class="flavor-pill">choco</span>
+          <span class="flavor-pill">premium</span>
+          <span class="flavor-pill">chocolate</span>
+          <span class="flavor-pill">variety</span>
+        </div>
+      </div>  
+  </section>
+
+  <!-- DISTRIBUTION -->
+  <section class="distribution" id="distribution">
+    <div class="dist-inner">
+      <div class="dist-text">
+        <p class="section-eyebrow">Reach &amp; Logistics</p>
+        <h2>Reliable <em>Distribution</em> Across the Gulf</h2>
+        <p>As a dedicated distributor, we connect premium confectionery brands with retailers, hotels, corporates, and
+          gift suppliers across the UAE and wider Gulf region.</p>
+        <div class="dist-features">
+          <div class="dist-feature">
+            <div class="dist-icon">🏪</div>
+            <div class="dist-feature-text">
+              <strong>Retail Partners</strong>
+              <span>Supermarkets, Hypermarkets, roastery store, and more.</span>
+            </div>
+          </div>
+          <div class="dist-feature">
+            <div class="dist-icon">🏨</div>
+            <div class="dist-feature-text">
+              <strong>Hospitality &amp; Hotels</strong>
+              <span>Supplying premium sweets to 5-star hotels, lounges, and F&amp;B establishments</span>
+            </div>
+          </div>
+          <div class="dist-feature">
+            <div class="dist-icon">🎁</div>
+            <div class="dist-feature-text">
+              <strong>Corporate Gifting</strong>
+              <span>Bespoke gift hampers and branded packaging for corporate occasions and events</span>
+            </div>
+          </div>
+          <div class="dist-feature">
+            <div class="dist-icon">📦</div>
+            <div class="dist-feature-text">
+              <strong>Wholesale Supply</strong>
+              <span>Flexible bulk ordering with competitive pricing for larger partners</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dist-map">
+        <div class="map-dots">🗺</div>
+        <div class="map-tag">UAE &amp; Beyond</div>
+        <div class="map-sub">Active distribution network</div>
+        <div class="map-regions">
+          <span class="region-dot">All Over UAE</span>
+           <span class="region-dot">Oman</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <p class="section-eyebrow">Connect with Us</p>
+        <h2>Let's <em>Contact</em></h2>
+        <p>Whether you're a retailer, event planner, or gift supplier — we'd love to discuss how Sweets of Oman UAE can
+          work with you. Reach out and our team will get back to you promptly.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <strong>Address</strong>
+              <span>AL Qiyadah, Hor al Anz East Deira Dubai-Uae</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text">
+              <strong>Phone</strong>
+              <span>+971 0553639282</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <span>Operations@sweetsofomanuae.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div class="contact-item-text">
+              <strong>Working Hours</strong>
+              <span>Mon – Sat: 8:00 AM – 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <h3>Send Us a Message</h3>
+        <div id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Ahmad" id="fname" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Al-Rashid" id="lname" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@company.com" id="email" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+971 XX XXX XXXX" id="phone" />
+          </div>
+          <div class="form-group">
+            <label>Enquiry Type</label>
+            <select id="enquiry">
+              <option value="">Select an option</option>
+              <option>Retail Partnership</option>
+              <option>Wholesale / Bulk Order</option>
+              <option>Corporate Gifting</option>
+              <option>Product Information</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us how we can help you..." id="message"></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        </div>
+        <div class="form-success" id="form-success">
+          ✦ Thank you! We'll be in touch soon.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Sweets <span>of Oman</span></a>
+        <p>Bringing the finest Gulf confections and premium chocolates to the UAE and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#brands">Our Brands</a></li>
+          <li><a href="#distribution">Distribution</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#products">Naqko</a></li>
+          <li><a href="#products">Zoha</a></li>
+          <li><a href="#products">Emir bytes</a></li>
+          <li><a href="#products">Misky</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sweets of Oman trading LLC. All rights reserved.</p>
+      <div class="footer-divider"></div>
+      <p>Crafted with love from the Gulf</p>
+    </div>
+  </footer>
+
+  <script>
+    function submitForm() {
+      const fname = document.getElementById('fname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (!fname || !email) {
+        alert('Please fill in at least your name and email.');
+        return;
+      }
+      document.getElementById('contact-form').style.display = 'none';
+      const s = document.getElementById('form-success');
+      s.style.display = 'block';
+    }
+
+    // Smooth scroll offset for fixed nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</html>
